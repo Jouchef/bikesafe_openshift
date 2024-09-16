@@ -12,7 +12,7 @@ COPY . .
 RUN npm run build
 
 # Vaihe 2: tuotanto vaihe
-FROM nginx:alpine
+FROM nginxinc/nginx-unprivileged:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 8080
