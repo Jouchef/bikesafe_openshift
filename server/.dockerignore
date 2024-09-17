@@ -1,0 +1,12 @@
+# Node.js riippuvuudet - nämä asennetaan uudelleen Dockerfilessä
+node_modules
+npm-debug.log
+
+# Git ja versionhallintaan liittyvät tiedostot
+.git
+.gitignore
+
+# Kehitystyöhön liittyvät tiedostot
+/.vscode
+
+.env
