@@ -1,6 +1,8 @@
 # Vaihe 1: build vaihe
 FROM node:20-alpine AS build
 
+RUN echo "buildi alkaa"
+
 WORKDIR /app
 
 COPY package.json ./
