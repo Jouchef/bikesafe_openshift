@@ -10,13 +10,13 @@ COPY package.json ./
 RUN npm install
 
 COPY . .
-# ARG REACT_APP_API_URL: Määrittelee build-argumentin nimeltä REACT_APP_API_URL.
-# ENV REACT_APP_API_URL=$REACT_APP_API_URL: Asettaa ympäristömuuttujan build-vaiheessa, jotta se on käytettävissä käännöksen aikana.
-ARG REACT_APP_API_URL 
-ENV REACT_APP_API_URL=$REACT_APP_API_URL
+# ARG VITE_API_URL: Määrittelee build-argumentin nimeltä VITE_API_URL.
+# ENV VITE_API_URL=$VITE_API_URL: Asettaa ympäristömuuttujan build-vaiheessa, jotta se on käytettävissä käännöksen aikana.
+ARG VITE_API_URL 
+ENV VITE_API_URL=$VITE_API_URL
 
 # Tulosta muuttujan arvo
-RUN echo "REACT_APP_API_URL on $REACT_APP_API_URL"
+RUN echo "VITE_API_URL on $VITE_API_URL"
 
 RUN npm run build
 
